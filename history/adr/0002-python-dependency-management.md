@@ -29,4 +29,5 @@ We have chosen **Poetry**.
 
 *   **Benefit:** Zero "dependency drift" issues. Consistent environments.
 *   **Cost:** Steep learning curve for students unfamiliar with it.
-*   **Mitigation:** We will include a "Poetry Crash Course" in the Quickstart guide.
+*   **Risk:** `colcon build` does not natively support Poetry's virtual environment encapsulation.
+*   **Mitigation:** We must configure `colcon` to build into the Poetry shell or use a `setup.py` shim. This adds complexity to the build pipeline compared to standard `pip`. We will include a "Poetry Crash Course" in the Quickstart guide and provide pre-configured `colcon` build scripts.
