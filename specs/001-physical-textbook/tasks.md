@@ -13,17 +13,17 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 **Goal**: Establish the "Dual-Reality" build environment (Simulated x86 & Physical ARM64).
 **Risks**: ROS 2 Jazzy on ARM64 build times; Poetry+Colcon integration.
 
-- [ ] T001 [P] Create `infrastructure/docker/dev.amd64.Dockerfile` for ROS 2 Jazzy (Simulated)
+- [-] T001 [P] Create `infrastructure/docker/dev.amd64.Dockerfile` for ROS 2 Jazzy (Simulated) - Deferred to Phase 2 per Strategic Pivot.
   - Output: Docker image `ros2-jazzy-amd64` that runs `ros2 topic list`.
-- [ ] T002 [P] Create `infrastructure/docker/dev.arm64.Dockerfile` for ROS 2 Jazzy (Jetson/Physical)
+- [-] T002 [P] Create `infrastructure/docker/dev.arm64.Dockerfile` for ROS 2 Jazzy (Jetson/Physical) - Deferred to Phase 2 per Strategic Pivot.
   - Output: Docker image `ros2-jazzy-arm64` (cross-compiled) that runs `ros2 topic list`.
-- [x] T003 Setup `backend/pyproject.toml` with Poetry dependencies (FastAPI, LangChain, Qdrant)
+- [-] T003 Setup `backend/pyproject.toml` with Poetry dependencies (FastAPI, LangChain, Qdrant) - Deferred to Phase 2 per Strategic Pivot.
   - Output: `poetry lock` file generated without conflicts.
-- [ ] T004a Create `infrastructure/scripts/detect_ros_env.sh` to check for active Poetry env
+- [-] T004a Create `infrastructure/scripts/detect_ros_env.sh` to check for active Poetry env - Deferred to Phase 2 per Strategic Pivot.
   - Output: Script returns 0 if Poetry is active, 1 otherwise.
-- [ ] T004b **[CRITICAL]** Implement `infrastructure/scripts/colcon_poetry_build.sh` build shim (ADR-002)
+- [-] T004b **[CRITICAL]** Implement `infrastructure/scripts/colcon_poetry_build.sh` build shim (ADR-002) - Deferred to Phase 2 per Strategic Pivot.
   - Output: Script successfully runs `colcon build` inside `poetry run`.
-- [ ] T005 Create `docker-compose.yml` orchestrating Backend, Qdrant, Neon (mock), and Docusaurus dev server
+- [-] T005 Create `docker-compose.yml` orchestrating Backend, Qdrant, Neon (mock), and Docusaurus dev server - Deferred to Phase 2 per Strategic Pivot.
   - Output: `docker-compose up` services are healthy (green).
 
 **Checkpoint**: `docker-compose up` launches a working ROS 2 environment and Python backend on both x86 and ARM64.
@@ -34,15 +34,15 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 **Goal**: Functional API for Auth and RAG.
 
-- [ ] T006 Initialize FastAPI app structure in `backend/src/api`
+- [-] T006 Initialize FastAPI app structure in `backend/src/api` - Deferred to Phase 2 per Strategic Pivot.
   - Output: `GET /health` returns 200 OK.
-- [ ] T007 Implement Better-Auth integration with Postgres (Neon) for User/HardwareProfile entities
+- [-] T007 Implement Better-Auth integration with Postgres (Neon) for User/HardwareProfile entities - Deferred to Phase 2 per Strategic Pivot.
   - Output: User can sign up via API and row appears in DB.
-- [ ] T008 Implement Qdrant client connection and collection initialization
+- [-] T008 Implement Qdrant client connection and collection initialization - Deferred to Phase 2 per Strategic Pivot.
   - Output: Script creates `textbook_chunks` collection in Qdrant.
-- [ ] T009 Create RAG Ingestion Service (`backend/src/rag/ingest.py`) to parse MDX files
+- [-] T009 Create RAG Ingestion Service (`backend/src/rag/ingest.py`) to parse MDX files - Deferred to Phase 2 per Strategic Pivot.
   - Output: Service extracts text and metadata (Module/Week) from sample MDX.
-- [ ] T010 Implement `/api/chat` endpoint with LangChain retrieval logic (citations required)
+- [-] T010 Implement `/api/chat` endpoint with LangChain retrieval logic (citations required) - Deferred to Phase 2 per Strategic Pivot.
   - Output: Endpoint returns JSON with `answer` and `sources` list.
 
 **Checkpoint**: `curl` request to `/api/chat` returns a cited answer from a sample MDX file.
