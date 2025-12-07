@@ -17,7 +17,7 @@ A student visits the textbook site. They are prompted to Sign Up/In. Upon regist
 **Acceptance Scenarios**:
 1. **Given** a new user, **When** they register via Better-Auth, **Then** they MUST select a hardware profile (RTX/Jetson).
 2. **Given** an "RTX" user viewing Week 1 content, **When** the page loads, **Then** `:::note[Jetson-Compatible]` sections are collapsed/hidden and `:::note[RTX-Required]` sections are highlighted.
-3. **Given** a user reading a code block, **When** they toggle the "Platform" switch manually, **Then** the content updates dynamically without page reload.
+3. **Given** a user reading a code block, **When** they toggle the "Platform" switch manually between "Simulated (RTX)" and "Physical (Jetson)", **Then** the content updates dynamically without page reload.
 
 ### User Story 2 - The AI-Assisted Researcher (Priority: P2)
 
@@ -40,19 +40,24 @@ A student whose primary language is Urdu visits the site. They toggle the "Langu
 **Acceptance Scenarios**:
 1. **Given** any page, **When** "Urdu" is toggled, **Then** text content is replaced with AI-translated versions.
 2. **Given** a technical term (e.g., "ROS 2"), **When** translated, **Then** it MUST remain "ROS 2" (transliteration or direct English retention).
+3. **Given** a user attempts to translate, **When** the translation API fails, **Then** a toast error message MUST be displayed.
 
 ## Requirements *(mandatory)*
 
 ### Functional Requirements
 
 - **FR-001 (Platform)**: System MUST be a Docusaurus static site deployed to GitHub Pages.
-- **FR-002 (Auth)**: System MUST use Better-Auth for user management and hardware profile persistence (Postgres).
-- **FR-003 (RAG)**: System MUST expose a FastAPI endpoint `/api/chat` that queries a Qdrant vector database populated with the textbook markdown.
-- **FR-004 (Personalization)**: System MUST use React Context to manage `hardwareProfile` state and conditionally render Docusaurus Admonitions.
-- **FR-005 (Translation)**: System MUST provide a UI toggle that swaps MDX content with pre-generated Urdu translations (or dynamic if feasible/cost-effective, pre-generated preferred for static site).
-- **FR-006 (RI Patterns)**: Implementation MUST utilize `Reusable Intelligence` patterns:
+- **FR-002 (ROS 2 Version)**: Code examples and instructions MUST target **ROS 2 Jazzy Jalisco (LTS)**.
+- **FR-003 (Python Env)**: The FastAPI backend and Python utilities MUST use **Poetry** for dependency management.
+- **FR-004 (Auth)**: System MUST use Better-Auth for user management and hardware profile persistence (Postgres).
+- **FR-005 (Frontend-Backend)**: Docusaurus React frontend MUST fetch dynamic data via **client-side `useEffect` hooks** calling FastAPI endpoints.
+- **FR-006 (RAG)**: System MUST expose a FastAPI endpoint `/api/chat` that queries a Qdrant vector database populated with the textbook markdown, including **code blocks, image captions/alt text, and admonitions**.
+- **FR-007 (Personalization)**: System MUST use React Context to manage `hardwareProfile` state and conditionally render Docusaurus Admonitions.
+- **FR-008 (Translation)**: System MUST provide a UI toggle that swaps MDX content with pre-generated Urdu translations (or dynamic if feasible/cost-effective, pre-generated preferred for static site).
+- **FR-009 (RI Patterns)**: Implementation MUST utilize `Reusable Intelligence` patterns:
     - *Agent Skills*: Encapsulate RAG logic as a reusable skill.
     - *Subagents*: Define a "Content Ingestion Agent" for parsing MDX into Qdrant.
+- **FR-010 (Code Compliance)**: Python code compliance MUST be enforced via a CI pipeline using **Ruff**; builds MUST fail on violations.
 
 ### Content Requirements (Table of Contents Mapping)
 
