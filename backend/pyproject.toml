@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "physical-ai-textbook-backend"
+version = "0.1.0"
+description = "Backend for Physical AI & Humanoid Robotics Textbook"
+authors = ["Admin <admin@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.109.0"
+langchain = "^0.1.0"
+uvicorn = "^0.27.0"
+qdrant-client = "^1.7.0"
+# better-auth-python = {version = ">=0.0.1", allow-prereleases = true} # TODO: Resolve correct Better-Auth python package
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.0"
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"

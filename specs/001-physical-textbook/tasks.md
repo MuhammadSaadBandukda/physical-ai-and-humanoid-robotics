@@ -17,7 +17,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: Docker image `ros2-jazzy-amd64` that runs `ros2 topic list`.
 - [ ] T002 [P] Create `infrastructure/docker/dev.arm64.Dockerfile` for ROS 2 Jazzy (Jetson/Physical)
   - Output: Docker image `ros2-jazzy-arm64` (cross-compiled) that runs `ros2 topic list`.
-- [ ] T003 Setup `backend/pyproject.toml` with Poetry dependencies (FastAPI, LangChain, Qdrant)
+- [x] T003 Setup `backend/pyproject.toml` with Poetry dependencies (FastAPI, LangChain, Qdrant)
   - Output: `poetry lock` file generated without conflicts.
 - [ ] T004a Create `infrastructure/scripts/detect_ros_env.sh` to check for active Poetry env
   - Output: Script returns 0 if Poetry is active, 1 otherwise.
