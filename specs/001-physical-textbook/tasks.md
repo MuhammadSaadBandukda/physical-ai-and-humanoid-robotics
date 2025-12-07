@@ -53,7 +53,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 **Goal**: Docusaurus site with functioning Hardware Context.
 
-- [ ] T011 Initialize Docusaurus project in `frontend/`
+- [x] T011 Initialize Docusaurus project in `frontend/`
   - Output: Docusaurus default site runs on localhost:3000.
 - [ ] T012 Implement `HardwareContext` React provider (Context API)
   - Output: Context enables switching `hardwareProfile` state.
