@@ -86,6 +86,13 @@ The site MUST strictly follow this structure:
 - **TextbookChunk**: ID, Content, EmbeddingVector, SourceChapterID.
 - **ChatMessage**: ID, UserID, Query, Response, Citations.
 
+## Non-Goals *(mandatory)*
+
+- **Live Hardware Deployment**: Content focuses on simulation and development kits (Jetson); deployment to commercial humanoid hardware (e.g., Tesla Optimus, Figure 01) is out of scope.
+- **Advanced Control Theory**: Curriculum targets undergraduate foundations; advanced topics like Model Predictive Control (MPC) or Whole-Body Control (WBC) research are excluded.
+- **Financial & Market Analysis**: Content is strictly technical; no analysis of robot unit economics, business models, or market trends.
+- **AI Ethics & Philosophy**: Integration of VLA models is purely functional; scope excludes philosophical debates on AGI or ethical bias in LLMs.
+
 ## Success Criteria *(mandatory)*
 
 ### Measurable Outcomes
