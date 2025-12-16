@@ -63,7 +63,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: Component renders standard Docusaurus admonition.
 - [x] T014b Implement Logic for `:::note[RTX-Required]` and `:::note[Jetson-Compatible]`
   - Output: Admonition hides/shows based on Context state.
-- [ ] T015 Implement `useEffect` hook to fetch User Profile from FastAPI on load
+- [x] T015 Implement `useEffect` hook to fetch User Profile from FastAPI on load
   - Output: Console logs user profile data on page load.
 
 **Checkpoint**: Toggling the Navbar switch instantly hides/shows specific admonitions on a test page.
