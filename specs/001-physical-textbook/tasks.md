@@ -61,7 +61,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: Navbar toggle updates Context state.
 - [x] T014a Create Base Admonition Wrapper Component
   - Output: Component renders standard Docusaurus admonition.
-- [ ] T014b Implement Logic for `:::note[RTX-Required]` and `:::note[Jetson-Compatible]`
+- [x] T014b Implement Logic for `:::note[RTX-Required]` and `:::note[Jetson-Compatible]`
   - Output: Admonition hides/shows based on Context state.
 - [ ] T015 Implement `useEffect` hook to fetch User Profile from FastAPI on load
   - Output: Console logs user profile data on page load.
