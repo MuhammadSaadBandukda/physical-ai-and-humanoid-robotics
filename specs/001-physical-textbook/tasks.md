@@ -76,13 +76,13 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 - [x] T016 Scaffold Docusaurus sidebar with all 13 Weeks (Modules 1-4)
   - Output: Sidebar matches Spec structure exactly.
-- [ ] T017 Create "Module 1: ROS 2" placeholder content (Week 1-5)
+- [x] T017 Create "Module 1: ROS 2" placeholder content (Week 1-5)
   - Output: MDX files exist for all Week 1-5 topics.
-- [ ] T018 Create "Module 2: Gazebo" placeholder content (Week 6-7)
+- [x] T018 Create "Module 2: Gazebo" placeholder content (Week 6-7)
   - Output: MDX files exist for all Week 6-7 topics.
-- [ ] T019 Create "Module 3: Isaac" placeholder content (Week 8-10)
+- [x] T019 Create "Module 3: Isaac" placeholder content (Week 8-10)
   - Output: MDX files exist for all Week 8-10 topics.
-- [ ] T020 Create "Module 4: VLA" placeholder content (Week 11-13 + Capstone)
+- [x] T020 Create "Module 4: VLA" placeholder content (Week 11-13 + Capstone)
   - Output: MDX files exist for all Week 11-13 topics.
 - [ ] T021 Run RAG Ingestion script on the scaffolded content
   - Output: Qdrant contains vectors for all new placeholder files.
