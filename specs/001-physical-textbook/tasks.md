@@ -84,7 +84,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: MDX files exist for all Week 8-10 topics.
 - [x] T020 Create "Module 4: VLA" placeholder content (Week 11-13 + Capstone)
   - Output: MDX files exist for all Week 11-13 topics.
-- [ ] T021 Run RAG Ingestion script on the scaffolded content
+- [-] T021 Run RAG Ingestion script on the scaffolded content - Deferred to Phase 2 per Strategic Pivot.
   - Output: Qdrant contains vectors for all new placeholder files.
 
 **Checkpoint**: All 13 weeks visible in sidebar; Chatbot can answer "What is covered in Week 1?".
@@ -97,7 +97,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 - [x] T022 Setup GitHub Actions workflow for Docusaurus Build & Deploy (GH Pages)
   - Output: Push to main triggers successful deploy.
-- [ ] T023 Setup GitHub Actions workflow for Python Linting (Ruff) (SC-005)
+- [-] T023 Setup GitHub Actions workflow for Python Linting (Ruff) (SC-005) - Deferred to Phase 2 per Strategic Pivot.
   - Output: CI fails if `backend/` code violates PEP 8.
 - [x] T024 Implement "Toast Error" fallback for Urdu Translation button (ADR-003)
   - Output: Clicking translate without API key shows UI Toast error.
