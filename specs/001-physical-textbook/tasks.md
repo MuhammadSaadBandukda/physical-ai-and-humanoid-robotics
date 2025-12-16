@@ -99,7 +99,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: Push to main triggers successful deploy.
 - [ ] T023 Setup GitHub Actions workflow for Python Linting (Ruff) (SC-005)
   - Output: CI fails if `backend/` code violates PEP 8.
-- [ ] T024 Implement "Toast Error" fallback for Urdu Translation button (ADR-003)
+- [x] T024 Implement "Toast Error" fallback for Urdu Translation button (ADR-003)
   - Output: Clicking translate without API key shows UI Toast error.
 - [x] T025 Write `quickstart.md` with "Poetry Crash Course" (ADR-002)
   - Output: Markdown file explaining `poetry install` and `poetry run`.

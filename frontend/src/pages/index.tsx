@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HardwareSwitch from '@site/src/components/HardwareSwitch'; // Import HardwareSwitch
+import TranslationSwitch from '@site/src/components/TranslationSwitch'; // Import TranslationSwitch
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -38,10 +39,14 @@ export default function Home(): ReactNode {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <HardwareSwitch /> {/* Place HardwareSwitch here */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            <HardwareSwitch />
+            <TranslationSwitch />
+        </div>
         <HomepageFeatures />
       </main>
     </Layout>
   );
 }
+
 
