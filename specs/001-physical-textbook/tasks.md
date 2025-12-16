@@ -101,7 +101,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: CI fails if `backend/` code violates PEP 8.
 - [ ] T024 Implement "Toast Error" fallback for Urdu Translation button (ADR-003)
   - Output: Clicking translate without API key shows UI Toast error.
-- [ ] T025 Write `quickstart.md` with "Poetry Crash Course" (ADR-002)
+- [x] T025 Write `quickstart.md` with "Poetry Crash Course" (ADR-002)
   - Output: Markdown file explaining `poetry install` and `poetry run`.
 
 **Checkpoint**: PR merge deploys site to GitHub Pages; Ruff enforces PEP 8.
