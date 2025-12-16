@@ -95,7 +95,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 **Goal**: Production-ready deployment.
 
-- [ ] T022 Setup GitHub Actions workflow for Docusaurus Build & Deploy (GH Pages)
+- [x] T022 Setup GitHub Actions workflow for Docusaurus Build & Deploy (GH Pages)
   - Output: Push to main triggers successful deploy.
 - [ ] T023 Setup GitHub Actions workflow for Python Linting (Ruff) (SC-005)
   - Output: CI fails if `backend/` code violates PEP 8.
