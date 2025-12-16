@@ -59,7 +59,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: Context enables switching `hardwareProfile` state.
 - [x] T013 Create `HardwareToggle` UI component (Navbar item)
   - Output: Navbar toggle updates Context state.
-- [ ] T014a Create Base Admonition Wrapper Component
+- [x] T014a Create Base Admonition Wrapper Component
   - Output: Component renders standard Docusaurus admonition.
 - [ ] T014b Implement Logic for `:::note[RTX-Required]` and `:::note[Jetson-Compatible]`
   - Output: Admonition hides/shows based on Context state.
