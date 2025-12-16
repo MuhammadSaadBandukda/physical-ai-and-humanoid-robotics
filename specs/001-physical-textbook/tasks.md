@@ -74,7 +74,7 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 **Goal**: Populate the 4-Module structure and verify RAG.
 
-- [ ] T016 Scaffold Docusaurus sidebar with all 13 Weeks (Modules 1-4)
+- [x] T016 Scaffold Docusaurus sidebar with all 13 Weeks (Modules 1-4)
   - Output: Sidebar matches Spec structure exactly.
 - [ ] T017 Create "Module 1: ROS 2" placeholder content (Week 1-5)
   - Output: MDX files exist for all Week 1-5 topics.
