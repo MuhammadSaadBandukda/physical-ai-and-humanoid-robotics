@@ -112,4 +112,4 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 - [x] T026 Write `docs/01-Module-1-ROS2/01-Week-1-Foundations.md` (Dual-Reality Intro)
 - [x] T027 Write `docs/01-Module-1-ROS2/02-Week-2-Sensors.md` (LiDAR, Camera, IMU)
-- [ ] T028 Write `docs/01-Module-1-ROS2/03-Week-3-Topics.md` (Placeholder)
+- [x] T028 Write `docs/01-Module-1-ROS2/03-Week-3-ROS2-Arch.md` (Nodes, Topics, Services)
