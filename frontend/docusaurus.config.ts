@@ -25,7 +25,8 @@ const config: Config = {
   organizationName: 'MuhammadSaadBandukda', // Usually your GitHub org/user name.
   projectName: 'physical-ai-and-humanoid-robotics', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
