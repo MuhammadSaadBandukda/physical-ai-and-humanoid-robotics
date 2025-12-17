@@ -120,3 +120,8 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 ### Module 2: The Digital Twin (Gazebo)
 - [x] T031 Write `docs/02-Module-2-Gazebo/06-Week-6-Sim-Basics.md` (URDF/SDF, Physics)
 - [x] T032 Write `docs/02-Module-2-Gazebo/07-Week-7-Adv-Sim.md` (Sensors, HRI)
+
+### Module 3: The AI-Robot Brain (Isaac)
+- [x] T033 Write `docs/03-Module-3-Isaac/08-Week-8-Isaac-Fundamentals.md` (Photorealism, USD)
+- [ ] T034 Write `docs/03-Module-3-Isaac/09-Week-9-Perception.md` (VSLAM, Nav2)
+- [ ] T035 Write `docs/03-Module-3-Isaac/10-Week-10-RL.md` (Sim-to-Real Transfer)
