@@ -124,4 +124,4 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 ### Module 3: The AI-Robot Brain (Isaac)
 - [x] T033 Write `docs/03-Module-3-Isaac/08-Week-8-Isaac-Fundamentals.md` (Photorealism, USD)
 - [x] T034 Write `docs/03-Module-3-Isaac/09-Week-9-Perception.md` (VSLAM, Nav2)
-- [ ] T035 Write `docs/03-Module-3-Isaac/10-Week-10-RL.md` (Sim-to-Real Transfer)
+- [x] T035 Write `docs/03-Module-3-Isaac/10-Week-10-RL.md` (Sim-to-Real Transfer)
