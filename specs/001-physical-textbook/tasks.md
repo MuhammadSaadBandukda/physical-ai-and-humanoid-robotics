@@ -125,3 +125,9 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 - [x] T033 Write `docs/03-Module-3-Isaac/08-Week-8-Isaac-Fundamentals.md` (Photorealism, USD)
 - [x] T034 Write `docs/03-Module-3-Isaac/09-Week-9-Perception.md` (VSLAM, Nav2)
 - [x] T035 Write `docs/03-Module-3-Isaac/10-Week-10-RL.md` (Sim-to-Real Transfer)
+
+### Module 4: VLA & Humanoid Control
+- [x] T036 Write `docs/04-Module-4-VLA/11-Week-11-Kinematics.md` (Bipedal Locomotion)
+- [ ] T037 Write `docs/04-Module-4-VLA/12-Week-12-Manipulation.md` (Interaction Dynamics)
+- [ ] T038 Write `docs/04-Module-4-VLA/13-Week-13-Conversational.md` (LLMs, Whisper)
+- [ ] T039 Write `docs/04-Module-4-VLA/14-Capstone.md` (Autonomous Humanoid Spec)
