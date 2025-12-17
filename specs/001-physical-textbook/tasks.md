@@ -108,10 +108,15 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 
 ## Phase 2: Content Authoring
 
-**Goal**: Populate Module 1 with high-fidelity, dual-reality content.
+**Goal**: Populate Modules with high-fidelity, dual-reality content.
 
+### Module 1: The Robotic Nervous System (ROS 2)
 - [x] T026 Write `docs/01-Module-1-ROS2/01-Week-1-Foundations.md` (Dual-Reality Intro)
 - [x] T027 Write `docs/01-Module-1-ROS2/02-Week-2-Sensors.md` (LiDAR, Camera, IMU)
 - [x] T028 Write `docs/01-Module-1-ROS2/03-Week-3-ROS2-Arch.md` (Nodes, Topics, Services)
 - [x] T029 Write `docs/01-Module-1-ROS2/04-Week-4-Packages.md`
 - [x] T030 Write `docs/01-Module-1-ROS2/05-Week-5-Comms.md`
+
+### Module 2: The Digital Twin (Gazebo)
+- [x] T031 Write `docs/02-Module-2-Gazebo/06-Week-6-Sim-Basics.md` (URDF/SDF, Physics)
+- [ ] T032 Write `docs/02-Module-2-Gazebo/07-Week-7-Adv-Sim.md` (Sensors, HRI)
