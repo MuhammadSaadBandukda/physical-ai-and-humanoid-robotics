@@ -111,5 +111,5 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 **Goal**: Populate Module 1 with high-fidelity, dual-reality content.
 
 - [x] T026 Write `docs/01-Module-1-ROS2/01-Week-1-Foundations.md` (Dual-Reality Intro)
-- [ ] T027 Write `docs/01-Module-1-ROS2/02-Week-2-Nodes.md` (Placeholder)
+- [x] T027 Write `docs/01-Module-1-ROS2/02-Week-2-Sensors.md` (LiDAR, Camera, IMU)
 - [ ] T028 Write `docs/01-Module-1-ROS2/03-Week-3-Topics.md` (Placeholder)
