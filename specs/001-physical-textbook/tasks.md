@@ -105,3 +105,11 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
   - Output: Markdown file explaining `poetry install` and `poetry run`.
 
 **Checkpoint**: PR merge deploys site to GitHub Pages; Ruff enforces PEP 8.
+
+## Phase 2: Content Authoring
+
+**Goal**: Populate Module 1 with high-fidelity, dual-reality content.
+
+- [x] T026 Write `docs/01-Module-1-ROS2/01-Week-1-Foundations.md` (Dual-Reality Intro)
+- [ ] T027 Write `docs/01-Module-1-ROS2/02-Week-2-Nodes.md` (Placeholder)
+- [ ] T028 Write `docs/01-Module-1-ROS2/03-Week-3-Topics.md` (Placeholder)

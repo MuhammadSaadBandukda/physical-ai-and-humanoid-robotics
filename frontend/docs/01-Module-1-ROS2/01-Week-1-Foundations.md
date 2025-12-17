@@ -7,7 +7,7 @@ sidebar_label: Week 1 - Foundations
 
 > **Learning Objective:** By the end of this week, you will understand the distinction between "Disembodied AI" (LLMs) and "Embodied AI" (Robots), and you will have configured your development workstation—whether it is a Digital Twin (RTX) or a Physical Robot (Jetson).
 
-## 1.1 What is Embodied Intelligence?
+## 1.1 The Great Divide: Disembodied vs. Embodied AI
 
 Traditional AI (like ChatGPT) is **disembodied**. It lives on a server, processes text or images, and outputs data. It has no physical body, no sensors to touch the world, and no actuators to change it.
 
@@ -15,7 +15,12 @@ Traditional AI (like ChatGPT) is **disembodied**. It lives on a server, processe
 1.  **A Physical Body:** Defined by kinematics (joints, links) and dynamics (mass, inertia).
 2.  **Perception:** The ability to sense the environment (LiDAR, Cameras, IMUs).
 3.  **Actuation:** The ability to exert force on the world (Motors, Grippers).
-4.  **Loop Closure:** The continuous cycle of *Sense $ightarrow$ Think $ightarrow$ Act*.
+4.  **Loop Closure:** The continuous cycle of *Sense $\rightarrow$ Think $\rightarrow$ Act*.
+
+### Moravec's Paradox
+> *It is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility.* - Hans Moravec (1988)
+
+This paradox drives our course. Building a chatbot is "easy" (relatively); building a robot that can reliably pick up a cup is incredibly hard.
 
 ### The Agent-Environment Loop
 
@@ -50,7 +55,7 @@ This path runs on real embedded hardware, specifically the **NVIDIA Jetson Orin*
 
 ---
 
-## 1.3 Environment Setup
+## 1.3 Environment Setup (Dual-Reality)
 
 We use **Docker** to ensure our environments are reproducible across both paths.
 
@@ -91,7 +96,7 @@ docker run --runtime nvidia -it --rm \
 
 ---
 
-## 1.4 Verification
+## 1.4 "Hello World" System Check
 
 Once inside your container (Sim or Physical), verify that ROS 2 is talking to your system.
 
@@ -99,11 +104,25 @@ Once inside your container (Sim or Physical), verify that ROS 2 is talking to yo
 # check_ros_env.py
 import rclpy
 from rclpy.node import Node
+import platform
 
 def main():
     rclpy.init()
+    
+    # Detect Architecture
+    arch = platform.machine()
+    
+    print("="*40)
     print("✅ ROS 2 Environment is Active!")
     print(f"   DDS Middleware: {rclpy.get_rmw_implementation_identifier()}")
+    print(f"   Architecture:   {arch}")
+    
+    if arch == 'x86_64':
+        print("   Mode:           Simulated (RTX)")
+    elif arch == 'aarch64':
+        print("   Mode:           Physical (Jetson)")
+        
+    print("="*40)
     rclpy.shutdown()
 
 if __name__ == "__main__":
@@ -115,8 +134,11 @@ Run this script:
 python3 check_ros_env.py
 ```
 
-## 1.5 Summary
+## 1.5 The Project Roadmap
 
-You have now chosen your path. For the remainder of this book, pay close attention to the `RTX-Required` and `Jetson-Compatible` badges. They will guide you through the divergences in implementation.
+*   **Module 1 (ROS 2):** Learn the nervous system.
+*   **Module 2 (Gazebo):** Build the body in simulation.
+*   **Module 3 (Isaac):** Train the brain (Reinforcement Learning).
+*   **Module 4 (VLA):** Deploy to the real world (Sim-to-Real).
 
 **Next Week:** We will dive into the anatomy of robot sensors—giving eyes and ears to our intelligence.
