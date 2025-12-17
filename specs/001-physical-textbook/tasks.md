@@ -130,4 +130,4 @@ description: "5-Day Sprint Task List for Physical AI Textbook"
 - [x] T036 Write `docs/04-Module-4-VLA/11-Week-11-Kinematics.md` (Bipedal Locomotion)
 - [x] T037 Write `docs/04-Module-4-VLA/12-Week-12-Manipulation.md` (Interaction Dynamics)
 - [x] T038 Write `docs/04-Module-4-VLA/13-Week-13-Conversational.md` (LLMs, Whisper)
-- [ ] T039 Write `docs/04-Module-4-VLA/14-Capstone.md` (Autonomous Humanoid Spec)
+- [x] T039 Write `docs/04-Module-4-VLA/14-Capstone.md` (Autonomous Humanoid Spec)
