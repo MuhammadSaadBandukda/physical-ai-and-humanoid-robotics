@@ -1,0 +1,87 @@
+version: '3.9'
+
+services:
+  # Backend API (FastAPI)
+  backend:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/dev.amd64.Dockerfile
+    container_name: physical-ai-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/physical_ai
+      - QDRANT_URL=http://qdrant:6333
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./backend:/workspace/backend
+      - ./frontend/docs:/workspace/frontend/docs:ro
+    command: poetry run uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - db
+      - qdrant
+    networks:
+      - ai-network
+
+  # PostgreSQL Database (User Data)
+  db:
+    image: postgres:16-alpine
+    container_name: physical-ai-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=physical_ai
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - ai-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Qdrant Vector Database (Embeddings)
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: physical-ai-qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - ai-network
+    environment:
+      - QDRANT_SNAPSHOT_RECOVERY=true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Frontend (Docusaurus)
+  frontend:
+    image: node:18-alpine
+    container_name: physical-ai-frontend
+    working_dir: /app/frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend
+    command: sh -c "npm install && npm run start"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    networks:
+      - ai-network
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
+  qdrant_data:
+
+networks:
+  ai-network:
+    driver: bridge

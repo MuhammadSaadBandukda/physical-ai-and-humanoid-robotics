@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(node --version:*)",
+      "Bash(python3 -m pip install:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(netstat:*)",
+      "Bash(timeout 5 curl:*)",
+      "Bash(__NEW_LINE__ echo \"\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
