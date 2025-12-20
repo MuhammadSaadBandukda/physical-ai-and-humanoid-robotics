@@ -1,0 +1,37 @@
+# infrastructure/docker/dev.arm64.Dockerfile
+# Target: Physical Environment (ARM64/Jetson)
+# Contains: ROS 2 Jazzy Base (Minimal), Python 3.12 (via Ubuntu 24.04)
+
+FROM ros:jazzy-ros-base
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+# 1. System Dependencies
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    python3-venv \
+    curl \
+    build-essential \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# 2. Install Poetry
+ENV POETRY_HOME="/opt/poetry" \
+    POETRY_VIRTUALENVS_IN_PROJECT=true \
+    POETRY_NO_INTERACTION=1
+ENV PATH="$POETRY_HOME/bin:$PATH"
+RUN curl -sSL https://install.python-poetry.org | python3 -
+
+# 3. Workspace Setup
+WORKDIR /workspace/backend
+
+# 4. Dependency Resolution
+# CRITICAL: We copy ONLY pyproject.toml. We do NOT copy the host's poetry.lock
+COPY backend/pyproject.toml .
+
+# 5. Install Dependencies
+RUN poetry lock && poetry install --no-root
+
+# 6. Verify ROS 2 is available
+RUN ros2 --version
